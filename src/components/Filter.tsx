@@ -11,7 +11,7 @@ function Filter() {
   const tag = searchParams.get("tag");
 
   useEffect(() => {
-    if (search) {
+    if (!tag) {
       setTimeout(() => {
         router.push(`/?search=${search}`);
       }, 300);
